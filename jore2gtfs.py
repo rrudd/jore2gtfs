@@ -31,6 +31,9 @@ for line in io.open('pysakki.dat', encoding='ISO_8859-1'):
     # Set terminal of stops in the Lauttasaari cluster to Lauttasaari Metro
     if stop_code in ["H1025", "H1024", "H1027"]:
         parent_station = "1000118"
+    # Set terminal of stops in the Keilaniemi cluster to Keilaniemi Metro
+    if stop_name == "Keilasatama":
+        parent_station = "2000101"
 
     stops.append([stop_id, stop_code, stop_name, stop_desc, stop_lat, stop_lon, parent_station, location_type])
 
